@@ -1,7 +1,7 @@
 // Manual mock
-// export function getButtonText() {
-//     return 'mockText'
-// }
+export function getButtonText() {
+    return 'mockText'
+}
 
 // Extend automocks with manual mocks like this
 // See highcharts wrapper for an example
