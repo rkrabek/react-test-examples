@@ -1,6 +1,10 @@
 import React from 'react';
 import { getButtonText } from './buttonHelper';
 
+export interface ButtonProps {
+    clickHandler: () => void,
+    extraCalculatedProp: number
+}
 export class Button extends React.Component {
     public props: any;
 

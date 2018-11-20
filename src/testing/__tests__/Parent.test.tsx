@@ -4,9 +4,10 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import * as React from 'react';
 
-it('is updated when ', () => {
+// integration test without mocking
+it('displayed counter text is updated when child button is clicked ', () => {
   // render parent
-  let parent: ReactWrapper = mount(<Parent />);
+  let parent: ReactWrapper<{}, {}, Parent> = mount(<Parent />);
   parent.find(Button).simulate('click');
   expect(parent.first().text()).toEqual('1');
   parent.find(Button).simulate('click');
