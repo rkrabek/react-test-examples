@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button } from './Button';
-export class Parent extends React.Component {
+
+export interface ParentState {
+  counter: number
+}
+export class Parent extends React.Component<{}, ParentState> {
   constructor(props: any) {
       super(props);
       this.state = {
@@ -11,7 +15,9 @@ export class Parent extends React.Component {
 
   onClickHandler() {
     this.setState((prevState) => {
-      return prevState.counter += 1;
+      return {
+        counter: prevState.counter + 1
+      }
     })
   }
   

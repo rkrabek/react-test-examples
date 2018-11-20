@@ -14,7 +14,8 @@ describe('The Button', () => {
     // render parent
     let clickHandlerMock = jest.fn()
     let buttonWrapper: ShallowWrapper<ButtonProps, null, Button> = shallow(<Button onClick={clickHandlerMock} />);
-    buttonWrapper.props().clickHandler();
+    // this tests that the button clickhandler method calls the function passed in via props
+    buttonWrapper.instance().clickHandler();
     expect(clickHandlerMock).toHaveBeenCalledTimes(1);
   })
 
